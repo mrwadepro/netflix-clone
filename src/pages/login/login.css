@@ -1,0 +1,39 @@
+.backgroundImage {
+  background-image: url("../../assets/signUpSplash.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+}
+
+.logo {
+  fill: #e50914;
+  width: 165.5px;
+  height: 45px;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  margin-left: auto;
+}
+
+.container-1-box-3 {
+  flex: 2;
+}
+.container-2 {
+  display: flex;
+}
+.container-2-box-1 {
+  flex: 12;
+}
+h1 {
+  color: white;
+}
+p {
+  color: white;
+  font-weight: 500;
+}
