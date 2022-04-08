@@ -20,7 +20,16 @@
 .select {
   margin-left: auto;
 }
-
+.inputField {
+  line-height: 3em;
+  width: 15%;
+}
+.getStartedButton {
+  line-height: 3em;
+  background-color: #e50914;
+  color: white;
+  width: 10%;
+}
 .container-1-box-3 {
   flex: 2;
 }

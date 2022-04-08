@@ -1,6 +1,9 @@
 import "./login.css";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { useState } from "react";
 const Login = (props) => {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="backgroundImage">
       <div className="container-1">
@@ -19,6 +22,16 @@ const Login = (props) => {
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
+          <form onSubmit={() => alert("Submit")}>
+            <input
+              className="inputField"
+              type="email"
+              value={email}
+              onChange={(value) => setEmail(value)}
+              placeholder="Email address"
+            ></input>
+            <button className="getStartedButton">Get Started</button>
+          </form>
         </div>
       </div>
     </div>
