@@ -12,7 +12,7 @@ const Login = (props) => {
           <option value="english">English</option>
           <option value="spanish">Spanish</option>
         </select>
-        <button>Sign In</button>
+        <button className="signInButton">Sign In</button>
       </div>
       <div className="container-2">
         <div className="container-2-box-1">

@@ -1,6 +1,6 @@
 .backgroundImage {
   background-image: url("../../assets/signUpSplash.jpg");
-  height: 100vh;
+  height: 100vh; /*viewport height*/
   background-size: cover;
   background-position: center;
   padding: 25px;
@@ -18,13 +18,20 @@
 
 .select {
   margin-left: auto;
+  background-color: black;
+  color: white;
+}
+.signInButton {
+  background-color: #e50914;
+  color: white;
+  margin-left: 1%;
 }
 .inputField {
-  line-height: 3em;
+  line-height: 4em; /*Relative font size of element*/
   width: 15%;
 }
 .getStartedButton {
-  line-height: 3em;
+  line-height: 4em;
   background-color: #e50914;
   color: white;
   width: 10%;
