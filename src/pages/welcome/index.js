@@ -1,4 +1,4 @@
-import "./login.css";
+import "./welcome.css";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { useState } from "react";
 const Login = (props) => {

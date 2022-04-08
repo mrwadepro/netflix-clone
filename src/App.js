@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import Login from "./pages/login";
+import Welcome from "./pages/welcome";
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login />}></Route>
+        <Route path="/" element={<Welcome />}></Route>
       </Routes>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
