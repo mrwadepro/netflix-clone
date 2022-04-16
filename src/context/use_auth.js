@@ -1,14 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 
-// Add your Firebase credentials
-
-const credentials = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  appID: "",
-};
-
 const authContext = createContext();
 // Provider component that wraps your app and makes auth object ...
 // ... available to any child component that calls useAuth().
@@ -26,7 +17,7 @@ function useProvideAuth() {
   const [user, setUser] = useState(null);
   // Wrap any Firebase methods we want to use making sure ...
   // ... to save the user to state.
-  const signin = (email, password) => {
+  const signIn = (email, password) => {
     // return firebase
     //   .auth()
     //   .signInWithEmailAndPassword(email, password)
@@ -35,15 +26,15 @@ function useProvideAuth() {
     //     return response.user;
     //   });
   };
-  const signup = (email, password) => {};
-  const signout = () => {};
-  const sendPasswordResetEmail = (email) => {};
-  const confirmPasswordReset = (code, password) => {};
+  const signUp = (email, password) => {};
+  const signOut = () => {};
+
   // Subscribe to user on mount
   // Because this sets state in the callback it will cause any ...
   // ... component that utilizes this hook to re-render with the ...
   // ... latest auth object.
   useEffect(() => {
+    //Swap this out with an API call to logout
     // const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
     //   if (user) {
     //     setUser(user);
@@ -58,10 +49,8 @@ function useProvideAuth() {
 
   return {
     user,
-    signin,
-    signup,
-    signout,
-    sendPasswordResetEmail,
-    confirmPasswordReset,
+    signIn,
+    signUp,
+    signOut,
   };
 }

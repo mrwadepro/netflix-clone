@@ -1,18 +1,22 @@
 import "./welcome.css";
+import "../../index.css";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Login = (props) => {
   const [email, setEmail] = useState("");
 
   return (
     <div className="backgroundImage">
       <div className="container-1">
-        <Logo className="logo container-1-box-1" />
+        <Logo className="logo" />
         <select name="langOptions" className="select">
           <option value="english">English</option>
           <option value="spanish">Spanish</option>
         </select>
-        <button className="signInButton">Sign In</button>
+        <Link to="/login">
+          <button className="signInButton">Sign In</button>
+        </Link>
       </div>
       <div className="container-2">
         <div className="container-2-box-1">

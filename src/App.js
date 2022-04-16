@@ -1,8 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  Navigate,
+  useLocation,
+  Switch,
+} from "react-router-dom";
 import Welcome from "./pages/welcome";
 import Library from "./pages/library";
+import Login from "./pages/login";
 import { ProvideAuth, useAuth } from "./context/use_auth";
 function App() {
   return (
@@ -10,6 +18,7 @@ function App() {
       <ProvideAuth>
         <Routes>
           <Route path="/" element={<Welcome />} />
+          <Route path="/login" element={<Login />} />
           <Route
             path="/library"
             element={
