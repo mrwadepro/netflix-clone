@@ -1,8 +1,14 @@
+import { authContext } from "../../context/use_auth";
 const library = (props) => {
   return (
-    <div>
-      <p>libary</p>
-    </div>
+    <authContext.Consumer>
+      {(value) => {
+        {
+          console.log(value);
+        }
+        return <p>library</p>;
+      }}
+    </authContext.Consumer>
   );
 };
 

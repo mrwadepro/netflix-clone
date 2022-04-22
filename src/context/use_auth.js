@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 
-const authContext = createContext();
+export const authContext = createContext();
+
 // Provider component that wraps your app and makes auth object ...
 // ... available to any child component that calls useAuth().
 export function ProvideAuth({ children }) {
@@ -14,37 +15,12 @@ export const useAuth = () => {
 };
 // Provider hook that creates auth object and handles state
 function useProvideAuth() {
-  const [user, setUser] = useState(null);
-  // Wrap any Firebase methods we want to use making sure ...
-  // ... to save the user to state.
-  const signIn = (email, password) => {
-    // return firebase
-    //   .auth()
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then((response) => {
-    //     setUser(response.user);
-    //     return response.user;
-    //   });
-  };
+  const [user, setUser] = useState("Wade");
+
+  const signIn = (email, password) => {};
   const signUp = (email, password) => {};
   const signOut = () => {};
-
-  // Subscribe to user on mount
-  // Because this sets state in the callback it will cause any ...
-  // ... component that utilizes this hook to re-render with the ...
-  // ... latest auth object.
-  useEffect(() => {
-    //Swap this out with an API call to logout
-    // const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-    //   if (user) {
-    //     setUser(user);
-    //   } else {
-    //     setUser(false);
-    //   }
-    // });
-    // // Cleanup subscription on unmount
-    // return () => unsubscribe();
-  }, []);
+  useEffect(() => {}, []);
   // Return the user object and auth methods
 
   return {

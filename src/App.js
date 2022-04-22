@@ -1,13 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import {
-  Routes,
-  Route,
-  Link,
-  Navigate,
-  useLocation,
-  Switch,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Welcome from "./pages/welcome";
 import Library from "./pages/library";
 import Login from "./pages/login";
